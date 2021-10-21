@@ -1,0 +1,17 @@
+import { GROUPID } from "../util/settings/config";
+import { baseService } from "./baseServices";
+
+
+export class QuanLyRapService extends baseService {
+    constructor() {
+        super()
+    }
+
+    layDanhSachHeThongRap = () => {
+        return this.get(`/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=${GROUPID}`);
+
+    };
+
+}
+
+export const quanLyRapService = new QuanLyRapService();
