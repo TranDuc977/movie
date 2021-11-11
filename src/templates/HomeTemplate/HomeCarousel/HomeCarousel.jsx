@@ -41,7 +41,7 @@ export default function HomeCarousel(props) {
     },[])
 
     const contentStyle = {
-        height: '450px',
+        height: '700px',
         color: '#fff',
         lineHeight: '160px',
         textAlign: 'center',

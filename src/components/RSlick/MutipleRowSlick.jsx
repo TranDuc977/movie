@@ -11,7 +11,7 @@ function SampleNextArrow(props) {
     return (
         <div
             className={`${className} ${styleSlick['slick-prev']}`}
-            style={{ ...style, display: "block", color: 'black' }}
+            style={{ ...style, display: "block", color: 'black', marginRight: '-25px', marginTop:'-10px' }}
             onClick={onClick}
         />
     );
@@ -22,7 +22,7 @@ function SamplePrevArrow(props) {
     return (
         <div
             className={`${className} ${styleSlick['slick-prev']}`}
-            style={{ ...style, display: "block", color: 'black' }}
+            style={{ ...style, display: "block", color: 'black', marginTop:'-10px'}}
             onClick={onClick}
         />
     );
@@ -35,7 +35,7 @@ const MultipleRows = (props) => {
 
     const renderFilm = () => {
         return arrFilm.map((item, index) => {
-            return <div className={`${styleSlick['width-item']}`} key={index}>
+            return <div  className={`${styleSlick['width-item']}`} key={index}>
                 {/* <Film phim={item}/> */}
                 <Film_Flip item={item} />
             </div>
@@ -43,11 +43,8 @@ const MultipleRows = (props) => {
     }
 
     const settings = {
-        className: "center variable-width",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "30px",
-        slidesToShow: 3,
+        className: "slider variable-width",
+        slidesToShow: 4,
         speed: 500,
         rows: 1,
         slidesPerRow: 2,

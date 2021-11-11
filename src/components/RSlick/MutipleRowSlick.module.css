@@ -1,8 +1,14 @@
 .slick-prev:before, .slick-next:before {
 
-    color: gray !important;
+    color: black !important;
     font-size: 3rem !important;
+    padding-bottom: -20px;
 }
+
+.slick-prev:before {
+    margin-left: -25px !important;
+} 
+
 
 
 .width-item {

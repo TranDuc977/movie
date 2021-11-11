@@ -7,11 +7,11 @@ import { history } from '../../App';
 export default function Film_Flip(props) {
     const { item } = props;
     return (
-        <div className="flip-card mt-2">
+        <div className="flip-card mt-2 ">
             <div className="flip-card-inner">
                 <div className="flip-card-front">
 
-                    <img src={item.hinhAnh} alt="Avatar" style={{ width: 300, height: 300 }} onError={e => { e.target.onerror = null; e.target.src = 'https://picsum.photos/300/300'; }} />
+                    <img src={item.hinhAnh} alt="Avatar" className="w-full mr-5" style={{ height: 300 }} onError={e => { e.target.onerror = null; e.target.src = 'https://picsum.photos/300/300'; }} />
                 </div>
                 <div className="flip-card-back" style={{ position: 'relative', backgroundColor: 'rgba(0,0,0,.9)' }}>
                     <div style={{ position: 'absolute', top: 0, left: 0 }} >
@@ -27,7 +27,7 @@ export default function Film_Flip(props) {
                 </div>
             </div>
             {/* <NavLink to={`/detail/${item.maPhim}`}></NavLink> */}
-            <div className="bg-orange-300 text-center cursor-pointer py-2 bg-indigo-300 my-2 text-success-50 font-bold" 
+            <div className="bg-orange-300 text-center cursor-pointer pt-2 bg-indigo-300 my-2 text-success-50 font-bold " 
                 onClick={() => {
                     history.push(`/detail/${item.maPhim}`)
                 }}

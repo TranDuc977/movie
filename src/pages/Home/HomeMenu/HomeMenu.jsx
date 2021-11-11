@@ -16,14 +16,14 @@ export default function HomeMenu(props) {
 
 
 
-    const changeTabPosition = e => {
-        setState({ tabPosition: e.target.value });
-    };
+    // const changeTabPosition = e => {
+    //     setState({ tabPosition: e.target.value });
+    // };
 
     const renderHeThongRap = () => {
         return heThongRapChieu.map((heThongRap,index) => {
             return (
-                <TabPane tab={<img src={heThongRap.logo} className="rounded-full " width="50"></img>} key={index}>
+                <TabPane tab={<img src={heThongRap.logo} className="rounded-full " width="50"/>} key={index}>
                                <Tabs tabPosition={tabPosition}>
                     {heThongRap.lstCumRap?.map((cumRap, index) => {
                         return <TabPane tab={
